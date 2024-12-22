@@ -1,0 +1,171 @@
+/* Globalni reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e6f7ff;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header stilovi */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-style: oblique;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ff9800;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ff9800;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28155, 155, 155, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Dodatni stilovi za naslov */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: oblique;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #ddd;
+    text-align: center;
+}
+
+/* Responsive stilovi */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+}
+@keyframes fadeInAbout {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1 {
+    animation: fadeInAbout 1s ease-in-out;
+}
+
+.hero-section p {
+    animation: fadeInAbout 1.5s ease-in-out;
+}
+
+.carousel img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item .item-details {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.cart-item .item-details h5 {
+    margin: 0;
+}
+
+.cart-item .item-details p {
+    margin: 0;
+}
+
+.cart-item .quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity-control button {
+    margin: 0 5px;
+}
+
+.cart-item .item-total {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.card-img-top {
+    width: 100%; /* Slike će zauzeti širinu roditelja */
+    height: 250px; /* Fiksna visina */
+    object-fit: cover; /* Održava proporcije i popunjava dimenzije */
+    border-radius: 10px; /* Opcionalno za zaobljene ivice */
+}
+

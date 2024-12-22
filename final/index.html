@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Equipment - Home</title>
+    <link rel="stylesheet" href="styls.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Fitness Equipment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-12">
+                <h1>Your One-Stop Shop for All Fitness Needs</h1>
+                <p>Whether you're looking to get stronger, lose weight, or improve your overall fitness, we have the right
+                    equipment for you. From home gyms to strength training gear, we offer top-of-the-line fitness equipment
+                    to help you achieve your goals.</p>
+                <button class="btn btn-primary" onclick="window.location.href='registration.html'">Get Started</button>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <img src="equipment1.jpg" class="img-fluid rounded" alt="Fitness Equipment">
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" id="product-search" class="form-control" placeholder="Search for fitness equipment..." onkeyup="searchProducts()">
+        </div>
+
+        <div class="row" id="product-list">
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="dumbbells.jpg" class="card-img-top gallery-item" alt="Dumbbells">
+                    <div class="card-body">
+                        <h5 class="card-title">Dumbbells</h5>
+                        <p class="card-text">$30</p>
+                        <button class="btn btn-primary" onclick="addToCart('Dumbbells', 30)">Add to Cart</button>
+                        <a href="product-details.html?id=dumbbells" class="btn btn-secondary">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="yoga-mat.jpg" class="card-img-top gallery-item" alt="Yoga Mat">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoga Mat</h5>
+                        <p class="card-text">$20</p>
+                        <button class="btn btn-primary" onclick="addToCart('Yoga Mat', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="resistance-bands.jpg" class="card-img-top gallery-item" alt="Resistance Bands">
+                    <div class="card-body">
+                        <h5 class="card-title">Resistance Bands</h5>
+                        <p class="card-text">$15</p>
+                        <button class="btn btn-primary" onclick="addToCart('Resistance Bands', 15)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="kettlebell.jpg" class="card-img-top gallery-item" alt="Kettlebell (10 kg)">
+                    <div class="card-body">
+                        <h5 class="card-title">Kettlebell (10kg) </h5>
+                        <p class="card-text">$35</p>
+                        <button class="btn btn-primary" onclick="addToCart('Kettlebell', 35)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="foam-roller.jpg" class="card-img-top gallery-item" alt="Foam Roller">
+                    <div class="card-body">
+                        <h5 class="card-title">Foam Roller</h5>
+                        <p class="card-text">$18</p>
+                        <button class="btn btn-primary" onclick="addToCart('Foam Roller', 18)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="pull-up-bar.jpg" class="card-img-top gallery-item" alt="Pull-Up Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">Pull-Up Bar</h5>
+                        <p class="card-text">$40</p>
+                        <button class="btn btn-primary" onclick="addToCart('Pull-Up Bar', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="jump-rope.jpg" class="card-img-top gallery-item" alt="Jump Rope">
+                    <div class="card-body">
+                        <h5 class="card-title">Jump Rope</h5>
+                        <p class="card-text">$10</p>
+                        <button class="btn btn-primary" onclick="addToCart('Jump Rope', 10)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="medicine-ball.jpg" class="card-img-top gallery-item" alt="Medicine Ball">
+                    <div class="card-body">
+                        <h5 class="card-title">Medicine Ball (5kg)</h5>
+                        <p class="card-text">$30</p>
+                        <button class="btn btn-primary" onclick="addToCart('Medicine Ball', 30)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="workoutgloves.jpg" class="card-img-top gallery-item" alt="workoutgloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Workout Gloves</h5>
+                        <p class="card-text">$12</p>
+                        <button class="btn btn-primary" onclick="addToCart('workoutgloves', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="dumbbellss.jpg" class="card-img-top gallery-item" alt="dumbbells">
+                    <div class="card-body">
+                        <h5 class="card-title">Adjustable Dumbbells</h5>
+                        <p class="card-text">$50</p>
+                        <button class="btn btn-primary" onclick="addToCart('dumbbells', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="yoga.jpg" class="card-img-top gallery-item" alt="yoga">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoga Block</h5>
+                        <p class="card-text">$8</p>
+                        <button class="btn btn-primary" onclick="addToCart('yoga', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="mat.jpg" class="card-img-top gallery-item" alt="mat">
+                    <div class="card-body">
+                        <h5 class="card-title">Treadmill Mat</h5>
+                        <p class="card-text">$20</p>
+                        <button class="btn btn-primary" onclick="addToCart('mat', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="rowing-machine.jpg" class="card-img-top gallery-item" alt="Rowing Machine">
+                    <div class="card-body">
+                        <h5 class="card-title">Rowing Machine</h5>
+                        <p class="card-text">$200</p>
+                        <button class="btn btn-primary" onclick="addToCart('Rowing Machine', 200)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="box.jpg" class="card-img-top gallery-item" alt="box">
+                    <div class="card-body">
+                        <h5 class="card-title">Boxing Gloves</h5>
+                        <p class="card-text">$25</p>
+                        <button class="btn btn-primary" onclick="addToCart('box', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="tower.jpg" class="card-img-top gallery-item" alt="tower">
+                    <div class="card-body">
+                        <h5 class="card-title">Power Tower</h5>
+                        <p class="card-text">$150</p>
+                        <button class="btn btn-primary" onclick="addToCart('tower', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="spin-bike.jpg" class="card-img-top gallery-item" alt="Spin Bike">
+                    <div class="card-body">
+                        <h5 class="card-title">Spin Bike</h5>
+                        <p class="card-text">$250</p>
+                        <button class="btn btn-primary" onclick="addToCart('Spin Bike', 250)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="ankle.jpg" class="card-img-top gallery-item" alt="ankle">
+                    <div class="card-body">
+                        <h5 class="card-title">Ankle Weights</h5>
+                        <p class="card-text">$15</p>
+                        <button class="btn btn-primary" onclick="addToCart('ankle', 40)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="weight-bench.jpg" class="card-img-top gallery-item" alt="Weight Bench">
+                    <div class="card-body">
+                        <h5 class="card-title">Weight Bench</h5>
+                        <p class="card-text">$75</p>
+                        <button class="btn btn-primary" onclick="addToCart('Weight Bench', 75)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="ab-roller.jpg" class="card-img-top gallery-item" alt="Ab Roller">
+                    <div class="card-body">
+                        <h5 class="card-title">Ab Roller</h5>
+                        <p class="card-text">$20</p>
+                        <button class="btn btn-primary" onclick="addToCart('Ab Roller', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="gym.jpg" class="card-img-top gallery-item" alt="gym">
+                    <div class="card-body">
+                        <h5 class="card-title">Gym Timer</h5>
+                        <p class="card-text">$30</p>
+                        <button class="btn btn-primary" onclick="addToCart('gym', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="protein.jpg" class="card-img-top gallery-item" alt="protein">
+                    <div class="card-body">
+                        <h5 class="card-title">Protein</h5>
+                        <p class="card-text">$35</p>
+                        <button class="btn btn-primary" onclick="addToCart('protein', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <br>
+            <h2>Frequently Asked Questions</h2> <br> <br>
+            <div>
+                <button class="btn btn-secondary" onclick="toggleContent('faq1')">What is the return policy?</button> <br> <hr>
+                <p id="faq1" class="toggle-content" style="display: none;">We offer a 30-day return policy for all unused equipment in its original packaging.</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary" onclick="toggleContent('faq2')">Do you offer international shipping?</button> <br> <hr>
+                <p id="faq2" class="toggle-content" style="display: none;">Yes, we ship to most countries. Additional fees may apply.</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary" onclick="toggleContent('faq3')">Are there any warranties on your products?</button> <br> <hr>
+                <p id="faq3" class="toggle-content" style="display: none;">All products come with a one-year warranty against manufacturing defects.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="imageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>Fitness Equipment Project - Ajla Šorlija</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script>
+
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " has been added to your cart!");
+        }
+        function searchProducts() {
+            let searchInput = document.getElementById('product-search').value.toLowerCase();
+            let productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                let productName = card.querySelector('.card-title').textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function () {
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = this.src;
+                const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                imageModal.show();
+            });
+        });
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "team": [
+    {
+      "name": "Anna Victoria",
+      "role": "Personal Trainer",
+      "image": "team1.jpg"
+    },
+    {
+      "name": "Massy Arias",
+      "role": "Personal Trainer",
+      "image": "teamm2.jpg"
+    },
+    {
+      "name": "Amanda Bisk",
+      "role": "Personal Trainer",
+      "image": "team3.jpg"
+    }
+  ],
+  "products": [
+    {
+      "name": "Treadmill",
+      "description": "High-quality treadmill for home use.",
+      "image": "equipment1.jpg"
+    },
+    {
+      "name": "Dumbbells",
+      "description": "Adjustable dumbbells for versatile workouts.",
+      "image": "equipment2.jpg"
+    }
+  ]
+}
+
+  
